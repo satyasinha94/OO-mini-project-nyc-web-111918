@@ -6,7 +6,9 @@ In this project, we will be practicing object relationships in Ruby, with a part
 
 We've provided you with a console that you can use to test your code. To enter a console session, run ruby tools/console.rb. You'll be able to test out the methods that you write here.
 
-## Deliverables
+## Deliverables #
+
+Methods that are done have been commented out.
 
 ### `Recipe`
 Build the following methods on the Recipe class
@@ -34,10 +36,10 @@ should return all of the user instances -->
 should return all of the recipes this user has recipe cards for
 - `User#add_recipe_card`
 should accept a recipe instance as an argument, as well as a date and rating, and create a new recipe card for this user and the given recipe -->
-- `User#declare_allergen`
-should accept an ingredient instance as an argument, and create a new allergen instance for this user and the given ingredient
-- `User#allergens`
-should return all of the ingredients this user is allergic to
+<!-- - `User#declare_allergen`
+should accept an ingredient instance as an argument, and create a new allergen instance for this user and the given ingredient -->
+<!-- - `User#allergens`
+should return all of the ingredients this user is allergic to -->
 - `User#top_three_recipes`
 should return the top three highest rated recipes for this user.
 - `User#most_recent_recipe`
@@ -83,8 +85,8 @@ should return the recipe instance -->
 ### `Allergen`
 An Allergen is a join between a user and an ingredient.  This is a has-many-through relationship.  What methods should an instance of this model respond to?
 
-- `Allergen.all`
-should return all of the Allergen instances
+<!-- - `Allergen.all`
+should return all of the Allergen instances -->
 
 
 

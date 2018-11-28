@@ -16,25 +16,26 @@ class User
     RecipeCard.new(date, rating, self, recipe)
   end
 
-  def recipes
-    RecipeCard.all.map do |object|
-      if object.user == self
-        object.recipe
-        #binding.pry
+
+  def recipe_cards
+    RecipeCard.all.select do |recipe_card|
+      recipe_card.user == self
+      #binding.pry
       end
-    end.compact
+  end
+
+  def recipes
+    self.recipe_cards.map {|object| object.recipe}
   end
 
   def declare_allergen(ingredient)
     Allergen.new(ingredient, self)
   end
-  #binding.pry
 
   def allergens
-    Allergen.all.map do |object|
-      if object.user == self
-        object.ingredient
-      end
+    Allergen.all.select do |allergen|
+      allergen.user == self
     end
   end
+
 end
