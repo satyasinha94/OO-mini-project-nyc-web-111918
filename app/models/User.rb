@@ -43,7 +43,7 @@ class User
   end
 
   def top_three_recipes
-    sorted = recipe_cards.sort_by{|recipe_card| recipe_card.rating}.reverse[0..2]
+    recipe_cards.sort_by{|recipe_card| recipe_card.rating}.reverse[0..2]
   end
 
 end
