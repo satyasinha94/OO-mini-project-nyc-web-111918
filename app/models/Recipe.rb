@@ -27,18 +27,22 @@ end
   end
 
   def users
-    self.recipe_cards.map {|object| object.user.name}
+    recipe_cards.map {|object| object.user.name}
     #binding.pry
   end
 
   def ingredients
-    self.recipe_ingredients.map do |object|
-    object.ingredient.ingredients
+    recipe_ingredients.map do |object|
+    object.ingredient
     #binding.pry
     end
   end
 
   def add_ingredients(ingredients)
     RecipeIngredient.new(ingredients, self)
+  end
+
+  def allergens
+    Allergen.all.select{|allergen| self.ingredients.include? (allergen.ingredient)}
   end
 end

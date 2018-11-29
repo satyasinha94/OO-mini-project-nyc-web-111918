@@ -38,4 +38,12 @@ class User
     end
   end
 
+  def most_recent_recipe
+    recipe_cards.max_by{|recipe_card| recipe_card.date}
+  end
+
+  def top_three_recipes
+    sorted = recipe_cards.sort_by{|recipe_card| recipe_card.rating}.reverse[0..2]
+  end
+
 end
